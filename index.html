@@ -182,17 +182,7 @@
             <p class="fade-in-text"><strong>感謝親友們在這段時間的慰問與關心，您的關懷和鼓勵，陪伴我們度過了這段艱難的時光，敬邀您，與我們一同緬懷政國先生的美好回憶。</strong></p>
             <p class="fade-in-text"><strong>謝謝您，全體家眷，深深一鞠躬，並祝各位，一切平安順心！</strong></p>
         </div> 
-
-        // 渐显文本效果
-        <script>
-    const fadeInTexts = document.querySelectorAll('.fade-in-text');
-    fadeInTexts.forEach((text, index) => {
-        setTimeout(() => {
-            text.style.opacity = '1';
-        }, index * 1500); // 每段延迟1.5秒显示
-    })
-}
-        </script>
+        
 
     <!-- 致贈花籃部分 -->
 <section id="donate-flower">
@@ -291,43 +281,15 @@
             }
         };
 
-        // 幻灯片播放功能
-        let slideIndex = 0;
 
-        function showSlides() {
-            const slides = document.querySelectorAll(".slide");
-            slides.forEach(slide => slide.style.display = "none");
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // 每隔3秒切換幻燈片
-        }
-
-        function plusSlides(n) {
-            slideIndex += n;
-            const slides = document.querySelectorAll(".slide");
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            if (slideIndex < 1) { slideIndex = slides.length; }
-            showSlides();
-        }
-
-        showSlides(); // 初次調用以顯示第一張幻燈片
-
-document.getElementById('show-flower-baskets').addEventListener('click', function() {
-    const gallery = document.getElementById('flower-basket-gallery');
-    if (gallery.style.display === 'none' || gallery.style.display === '') {
-        gallery.style.display = 'block'; // 使用 block 使其显示
-    } else {
-        gallery.style.display = 'none';
-    }
-});
-
-        // 渐显文本效果
-        const fadeInTexts = document.querySelectorAll('.fade-in-text');
-        fadeInTexts.forEach((text, index) => {
-            setTimeout(() => {
-                text.style.opacity = '1';
-            }, index * 1500); // 每段延迟1.5秒
+   <script>
+        document.getElementById('show-flower-baskets').addEventListener('click', function() {
+            const gallery = document.getElementById('flower-basket-gallery');
+            if (gallery.style.display === 'none' || gallery.style.display === '') {
+                gallery.style.display = 'block'; // 使用 block 使其显示
+            } else {
+                gallery.style.display = 'none';
+            }
         });
     </script>
 </body>
