@@ -45,6 +45,11 @@
             margin: 0 10px; /* 图标间距 */
         }
 
+        .fade-in-text {
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 2s ease-in-out; /* 渐变效果 */
+}
+
         /* 幻灯片样式 */
         .slideshow-container {
             position: relative;
@@ -177,6 +182,17 @@
             <p class="fade-in-text"><strong>感謝親友們在這段時間的慰問與關心，您的關懷和鼓勵，陪伴我們度過了這段艱難的時光，敬邀您，與我們一同緬懷政國先生的美好回憶。</strong></p>
             <p class="fade-in-text"><strong>謝謝您，全體家眷，深深一鞠躬，並祝各位，一切平安順心！</strong></p>
         </div> 
+
+        // 渐显文本效果
+        <script>
+    const fadeInTexts = document.querySelectorAll('.fade-in-text');
+    fadeInTexts.forEach((text, index) => {
+        setTimeout(() => {
+            text.style.opacity = '1';
+        }, index * 1500); // 每段延迟1.5秒显示
+    })
+}
+        </script>
 
     <!-- 致贈花籃部分 -->
 <section id="donate-flower">
