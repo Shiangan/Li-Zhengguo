@@ -299,13 +299,13 @@
 
         // 花篮画廊显示/隐藏功能
         document.getElementById('show-flower-baskets').addEventListener('click', function() {
-            const gallery = document.getElementById('flower-basket-gallery');
-            if (gallery.style.display === 'none') {
-                gallery.style.display = 'flex';
-            } else {
-                gallery.style.display = 'none';
-            }
-        });
+    const gallery = document.getElementById('flower-basket-gallery');
+    if (gallery.style.display === 'none' || gallery.style.display === '') {
+        gallery.style.display = 'block'; // 使用 block 使其显示
+    } else {
+        gallery.style.display = 'none';
+    }
+});
 
         // 渐显文本效果
         const fadeInTexts = document.querySelectorAll('.fade-in-text');
